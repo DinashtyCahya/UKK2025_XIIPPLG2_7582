@@ -19,21 +19,21 @@ include "koneksi.php";
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <nav class="sb-topnav navbar navbar-expand navbar-light" style="background-color:khaki">
             <a class="navbar-brand ps-3" href="index.html">Todo List</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu bg-secondary">
+                <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu"  style="background-color:cornsilk">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <div class="sb-sidenav-menu-heading "></div>
                             <a class="nav-link" href="?">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Home
                             </a>
-                            <div class="sb-sidenav-menu-heading">Navigasi</div>
+                            <div class="sb-sidenav-menu-heading ">Navigation</div>
                             <a class="nav-link" href="?page=categories">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Categories
@@ -48,7 +48,7 @@ include "koneksi.php";
                             </a>
                         </div>
                     </div>
-                    <div class="sb-sidenav-footer">
+                    <div class="sb-sidenav-footer" style="background-color:khaki">
                         <div class="small">Logged in as:</div>
                         <?php echo $_SESSION['users']['name']; ?>
                     </div>
@@ -57,10 +57,19 @@ include "koneksi.php";
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
+			<?php
+
+                        $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+                        if(file_exists($page . '.php')){
+                            include $page . '.php';
+                        }else{
+                            include '404.php';
+                        }
+                        ?>
                     </div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
+                <footer class="py-4 mt-auto" style="background-color:khaki" >
+                    <div class="container-fluid px-4" >
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; 2025 DINASHTY</div>
                         </div>

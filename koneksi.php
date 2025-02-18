@@ -1,3 +1,3 @@
 <?php
 session_start();
-$koneksi = mysqli_connect('localhost','root','','ukk_todolist');
+$koneksi = mysqli_connect('localhost','root','','todolist');

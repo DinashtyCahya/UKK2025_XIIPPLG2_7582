@@ -42,7 +42,7 @@ include "koneksi.php";
                                         <form method="post">
                                             <div class="form-floating mb-5 ">
                                                 <input class="form-control" type="text" required name="username" placeholder="Username" />
-                                                <label >Nama Lengkap</label>
+                                                <label >Username</label>
                                             </div>
                                             <div class="form-floating mb-5">
                                                 <input class="form-control" type="email" required name="email" placeholder="Email" />
