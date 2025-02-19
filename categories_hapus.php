@@ -1,7 +1,9 @@
-<?php 
-include 'koneksi.php';
+<?php
+
 $id = $_GET['id'];
-mysql_query("DELETE FROM categories WHERE category='$id'")or die(mysql_error());
- 
-header("location:index.php?pesan=hapus");
-?>
+$query = mysqli_query($koneksi, "DELETE FROM categories WHERE user_id=$id");
+if($query) {
+    echo '<script>alert("Hapus Data Berhasil"); location.href="?page=categories"</script>';
+}else{
+    echo '<script>alert("Hapus Data Gagal")</script>';
+}

@@ -17,7 +17,7 @@
 
 <div class="container-fluid">
     <h1 class="mt-4">categories</h1>
-        <a href="?page=categories" class="btn btn-danger">kembali</a>
+        <a href="?page=categories" class="btn btn-outline-danger">kembali</a>
             <form method="post">
                 <table class="table table-bordered">
                     <tr>
@@ -39,8 +39,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <button type="submit" class="btn btn-primary" name="submit" value="submit">Simpan</button>
-                            <button type="reset" class="btn btn-danger">Reset</button>
+                            <button type="submit" class="btn btn-outline-primary" name="submit" value="submit" >Simpan</button>
+                            <button type="reset" class="btn btn-outline-danger">Reset</button>
                         </td>
                     </tr>
                 </table>
