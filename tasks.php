@@ -1,10 +1,9 @@
 <h1 class="mt-4">Tasks</h1>
-<div class="card">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-12">
-                <a href="?page=tasks_tambah" class="btn btn-outline-primary">+ Tambah Data</a>
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+<div class="container-fluid px-4">    
+        <a href="?page=tasks_tambah" class="btn btn-outline-primary">+ tambah Data</a>
+        <ol class="breadcrumb mb-4"></ol>
+            <table class="table table-bordered">
                     <tr>
                         <th>ID</th>
                         <th>Categories</th>

@@ -1,10 +1,13 @@
 <?php
+
+$id = $_GET['id'];
+
     if(isset($_POST['category'])) {
         $category= $_POST['category'];
         $id = $_POST['id'];
         $user_id = $_POST['user_id'];
 
-    $query = mysqli_query($koneksi, "INSERT INTO categories(id,category,user_id) values('$id','$category','$user_id')");
+        $query = mysqli_query($koneksi, "UPDATE categories set category='$category', id='$id', user_id='$user_id' WHERE id_categories=$id");
 
         if($query) {
         echo '<script>alert("Tambah Data Berhasil")</script>';
@@ -12,6 +15,9 @@
         echo '<script>alert("Tambah Data Gagal")</script>';
         }
     }
+
+    $query = mysqli_query($koneksi, "SELECT*FROM categories WHERE user_id=$id ");
+    $data = mysqli_fetch_array($query)
 
 ?>
 
