@@ -6,11 +6,13 @@
 
     $query = mysqli_query($koneksi, "INSERT INTO categories(id,category,user_id) values('$id','$category','$user_id')");
 
-        if($query) {
-        echo '<script>alert("Tambah Data Berhasil")</script>';
-        }else{
-        echo '<script>alert("Tambah Data Gagal")</script>';
-        }
+    if ($query) {
+        echo '<script>alert("Tambah data berhasil")
+        location.href="?page=categories"
+        </script>';
+    } else {
+        echo '<script>alert("Tambah data Gagal!")</script>';
+    }
     }
 
 ?>
@@ -36,13 +38,16 @@
                         <td>:</td>
                         <td><input class="form-control" type="number" step="0" name="user_id"></td>
                     </tr>
+                    <tr>
+                <td> </td>
+                <td> </td>
+                <td>
+                    <button type="submit" class="btn btn-outline-primary">Simpan</button>
+                    <button type="submit" class="btn btn-outline-danger">Reset</button>
+                    <a href="?page=categories" class="btn btn-outline-danger">kembali</a>
+                </td>
+            </tr>
+                    </tr>
                 </table>
-                <div class="row mb-3">
-                        <div class="col-md-8">
-                            <button type="submit" class="btn btn-outline-primary" name="submit" value="submit">Simpan</button>
-                            <button type="reset" class="btn btn-outline-secondary">Reset</button>
-                            <a href="?page=categories" class="btn btn-outline-danger">Kembali</a>
-                        </div>
-                    </div>  
             </form>
 </div>

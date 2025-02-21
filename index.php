@@ -22,6 +22,12 @@ include "koneksi.php";
         <nav class="sb-topnav navbar navbar-expand navbar-light" style="background-color:khaki">
             <a class="navbar-brand ps-3" href="index.html">Todo List</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-outline-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form> 
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -30,10 +36,16 @@ include "koneksi.php";
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading "></div>
                             <a class="nav-link" href="?">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa solid fa-house"></i></div>
                                 Home
                             </a>
                             <div class="sb-sidenav-menu-heading ">Navigation</div>
+                            <a class="nav-link" href="?page=profile">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            Profile
+                            </a>
                             <a class="nav-link" href="?page=categories">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Categories

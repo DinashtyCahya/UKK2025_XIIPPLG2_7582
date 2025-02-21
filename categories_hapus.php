@@ -1,5 +1,4 @@
 <?php
-
 $id = $_GET['id'];
 $query = mysqli_query($koneksi, "DELETE FROM categories WHERE user_id=$id");
 if($query) {
